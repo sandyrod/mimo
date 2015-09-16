@@ -1,0 +1,9 @@
+<?php
+
+// Autocarga
+
+function __autoload($clase){
+   require CORE .$clase. ".php";
+}
+
+$app=new Bootstrap();

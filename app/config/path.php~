@@ -1,0 +1,8 @@
+<?php
+define('BASE','http://'.$_SERVER['SERVER_NAME']);
+
+define('')
+
+define('CORE','core/');
+
+define('TEMPLATE','default');

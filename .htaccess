@@ -1,0 +1,30 @@
+AddDefaultCharset utf-8
+Options All -Indexes
+
+ErrorDocument 400 /mimo/public/errores/error400.php
+ErrorDocument 401 /mimo/public/errores/error401.php
+ErrorDocument 404 /mimo/public/errores/error404.php
+ErrorDocument 500 /mimo/public/errores/error500.php
+ErrorDocument 403 /mimo/public/errores/error403.php
+
+<FilesMatch "(\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp)|~)$">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</FilesMatch>
+
+RewriteCond %{SCRIPT_FILENAME} -d [OR]
+RewriteCond %{SCRIPT_FILENAME} -f
+RewriteRule "(^|/)\." - [F]
+
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-l
+
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+</IfModule>
