@@ -2,11 +2,11 @@
 class Controller {
 
     function __construct() {
-        $this->view=new Vista();
+        $this->view=new View();
     }
     
     public function cargarModelo($nombre){
-        $ruta = 'modelo/'. $nombre .'.php';
+        $ruta = URL.'app/modelo/'. $nombre .'.php';
         if(file_exists($ruta)){
             require $ruta;
             $nombreModelo = $nombre;

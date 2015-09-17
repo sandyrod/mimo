@@ -1,0 +1,1 @@
+<?php echo 'La pata de la pagina';

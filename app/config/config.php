@@ -5,4 +5,6 @@ define('URL', BASE.'/mimo/');
 
 define('CORE',URL.'core/');
 
-define('TEMPLATE',URL.'public/template/default');
+define('TEMPLATE','public/template/default/');
+
+define('APP', 'app/');

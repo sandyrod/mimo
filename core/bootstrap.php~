@@ -4,19 +4,19 @@
 	
 	require 'app/config/config.php';
 	require 'app/config/database.php';
-	echo 'entrando en bootstrap';	
+		
  class Bootstrap
 	{
 	
 	function __construct() {
-		echo 'entrando en el contructor';
-   	spl_autoload_register(auto);
+		
+   	
    	  $url = isset($_GET['url']) ? $_GET['url'] : null;
         $url = rtrim($url, '/');
         $url = explode('/', $url);
         
         if(empty($url[0])){
-            require 'control/index.php';
+            require 'index.php';
             $controlador=new Index();
             $controlador->index();
             return false;
@@ -32,6 +32,26 @@
         $controlador = new $url[0];
         $controlador->cargarModelo($url[0]);
              
+             
+             //Llamando los metodos
+        if (isset($url[2])) {
+            if(method_exists($controlador, $url[1])){
+                 $controlador->{$url[1]}($url[2]);
+            }else{
+                $this->error();
+            }
+           
+        } else {
+            if (isset($url[1])) {
+                 if(method_exists($controlador, $url[1])){
+                    $controlador->{$url[1]}();
+                 }else{
+                     $this->error();
+                 }
+            }else{
+                $controlador->index();
+            }
+        }
     }
 
 	function app_version () {
@@ -39,27 +59,13 @@
 	}
 
 	
-    
-  function auto($class)
-	{
-	// Optimizando carga
-	$clases = array(
-		'ActiveRecord'    => CORE . 'libs/active_record.php',
-		'Load'            => CORE . 'kumbia/load.php',
-		'Exception' => CORE . 'kumbia/kumbia_exception.php',
-	);
-	if( array_key_exists ($class, $clases))
-	 {
-        return include $clases[$class];
-    }
-    
-    
-	}
+
+
 	
 
     
     function error(){
-        require 'controlador/error.php';
+        require 'error.php';
         $controlador=new Error();
         $controlador->index();
         return false;
