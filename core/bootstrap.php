@@ -16,7 +16,7 @@
         $url = explode('/', $url);
         
         if(empty($url[0])){
-            require 'index.php';
+            require 'app/control/index.php';
             $controlador=new Index();
             $controlador->index();
             return false;
@@ -57,10 +57,6 @@
 	function app_version () {
 		return '1.0';
 	}
-
-	
-
-
 	
 
     

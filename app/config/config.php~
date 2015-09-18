@@ -6,3 +6,9 @@ define('URL', BASE.'/mimo/');
 define('CORE',URL.'core/');
 
 define('TEMPLATE','public/template/default/');
+
+define('APP', 'app/');
+
+define('TITULO', 'MAYRA');
+
+define('AUTOR','Sandy Rodríguez, @seienshi');

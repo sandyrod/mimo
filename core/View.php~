@@ -18,10 +18,10 @@ class View {
     
     public function render($nombre, $no_include = FALSE){
         if($no_include){
-            require URL.'app/vista/' . $nombre . '.php';
+            require URL.'app/view/' . $nombre . '.php';
         }else{
             require TEMPLATE .'/header.php'; 
-            require APP .'vista/' . $nombre . '.php';
+            require APP .'view/' . $nombre . '.php';
             require TEMPLATE .'/footer.php';
         }
     }

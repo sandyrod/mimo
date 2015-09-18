@@ -1,0 +1,81 @@
+
+#page{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#CCC));/*Para chrome y Safari*/
+    /*Degradados*/
+    background-image: -moz-linear-gradient(top center, #FFF, #CCC);/*Para Firefox*/
+    background-image: -o-linear-gradient(top, #FFF, #CCC);/*Para Opera*/
+    background-image: linear-gradient(top, #FFF, #CCC);/*El estandar por defecto*/	
+	}
+#header{
+	background-color: beige;	
+	width: 100%;
+	clear:both;
+	}
+
+#slogan{
+	
+		float: right;
+			
+	}
+	
+
+#contenido{
+
+	width: 655px;
+
+	float: left;
+	}
+#footer{
+	text-align: center;
+	width: 100%;
+	background-color: beige;	
+	position: absolute;
+	bottom: 0;
+	
+	}
+	
+@media screen and (max-width: 980px) {
+	
+	#page {
+		width: 94%;
+	}
+	#contenido {
+		width: 65%;
+	}
+	#izq {
+		width: 30%;
+	}
+	#der{
+		width: 30%;
+	}
+
+}
+
+/* para 700px o menos */
+@media screen and (max-width: 700px) {
+
+	#contenido {
+		width: auto;
+		float: none;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* para 480px o menos */
+@media screen and (max-width: 480px) {
+
+	#header {
+		height: auto;
+	}
+	h1 {
+		font-size: 24px;
+	}
+	#sidebar {
+		display: none;
+	}
+
+}

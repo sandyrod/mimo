@@ -10,4 +10,4 @@ spl_autoload_register('auto');
     
     
 	}
-	$app=new Bootstrap();
+	$app=new bootstrap();

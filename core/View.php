@@ -13,7 +13,7 @@ class View {
     }
     
     public function set_titulo($titulo) {
-        $this->titulo= $titulo;
+        $this->titulo= TITULO. '-' . $titulo;
     }
     
     public function render($nombre, $no_include = FALSE){

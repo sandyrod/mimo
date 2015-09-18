@@ -8,3 +8,7 @@ define('CORE',URL.'core/');
 define('TEMPLATE','public/template/default/');
 
 define('APP', 'app/');
+
+define('TITULO', 'MIMO');
+
+define('AUTOR','Sandy Rodríguez, @seienshi');

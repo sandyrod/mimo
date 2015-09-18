@@ -1,6 +1,5 @@
 <?php
-//require 'core/bootstrap.php';
-//$app=new Bootstrap();
+
 spl_autoload_register('auto');
 
     function auto($clase)

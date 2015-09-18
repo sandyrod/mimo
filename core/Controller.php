@@ -2,7 +2,11 @@
 class Controller {
 
     function __construct() {
+    		//nombre del controlador en uso
+    	  $nombrecontrol=get_class($this);
+        
         $this->view=new View();
+        $this->view->set_titulo($nombrecontrol);
     }
     
     public function cargarModelo($nombre){

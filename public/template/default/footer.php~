@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><?php $this->mostrarTitulo()?></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="<?php echo TEMPLATE .'style.css'?>">
+		
+	</head>
+	<body>
+		<div id="page">
+			<div id="header">
+			<img src="<?php echo TEMPLATE?>images/logo.png" alt="" >
+				
+			</div>
+			
+
+			<div id="contenido">
+				
+
+			</div>
+			<div id="footer">
+				<p>Traductor a lenguaje de señas venezolano<br>
+					Desarrollado por Sandy Rodríguez</br>
+					@seienshi<br>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
