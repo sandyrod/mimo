@@ -20,9 +20,9 @@
 	
 
 #contenido{
-
+	text-align: center;
 	width: 655px;
-
+	vertical-align: middle;
 	float: left;
 	}
 #footer{
@@ -33,7 +33,54 @@
 	bottom: 0;
 	
 	}
+#opciones{
+	position: absolute;
+	width: 50%;
+	margin: 0;
+	left: 30%;
+	top: 30%;	
+	}
+.moza{
+	float: left;	
+	margin: 0 auto;
+	}
+.moza:hover{
+	opacity: 0.5;	
+	}
 	
+table{
+	border: 1px;
+	padding-top: 5px;
+}	
+th:first-child {
+    border-radius: 6px 0 0 0;
+}
+
+th:last-child {
+    border-radius: 0 6px 0 0;
+}
+
+th:only-child{
+    border-radius: 6px 6px 0 0;
+}
+
+th{
+	background-color: beige;	
+	}
+h2{
+	border-radius: 80px 20px;
+	background-color: beige;
+	font-size: 12px;
+	display: inline-block;
+	padding: 2px;
+	}
+h2:hover{
+	background-color: blueviolet;
+	font-size: 14px;	
+	}	
+input{
+	border-radius: 6px 6px 6px 6px; 	
+}
 @media screen and (max-width: 980px) {
 	
 	#page {

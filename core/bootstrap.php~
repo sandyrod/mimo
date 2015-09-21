@@ -14,15 +14,17 @@
    	  $url = isset($_GET['url']) ? $_GET['url'] : null;
         $url = rtrim($url, '/');
         $url = explode('/', $url);
-        
+        //echo $url[0];
         if(empty($url[0])){
+        		
             require 'app/control/index.php';
             $controlador=new Index();
             $controlador->index();
             return false;
         }
         
-        $file = 'control/' . $url[0] . '.php';
+        $file = 'app/control/' . $url[0] . '.php';
+        echo $file;
         if(file_exists($file)){
           require $file;  
         }else{
@@ -57,10 +59,6 @@
 	function app_version () {
 		return '1.0';
 	}
-
-	
-
-
 	
 
     

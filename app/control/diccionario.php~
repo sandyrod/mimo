@@ -1,0 +1,8 @@
+<?php
+
+class Diccionario extends Controller {
+	
+	 public function index() {
+
+    }
+}
